@@ -36,13 +36,22 @@ The goal is to create a smart TV feature that recognizes five gestures performed
 
 ## Project Structure
 
-1. **Data Generation**: Custom generator logic for handling video frames and feeding them into the models.
-2. **Models**:
-   - **Conv3D**: Designed to handle spatial and temporal aspects of video data.
-   - **CNN + RNN**: Combines convolutional layers with LSTM for sequential frame analysis.
-   - **MobileNet (Transfer Learning)**: Utilizes pre-trained MobileNet for feature extraction.
-3. **Evaluation**: Performance comparison of different models on metrics like accuracy and loss.
+1. **Data Preprocessing**: 
+   - Custom video frame extraction and preprocessing.
+   - Resizing frames and normalizing pixel values for model compatibility.
+   
+2. **Data Generator**:
+   - Designed to handle large datasets efficiently.
+   - Supports batch processing and dynamic augmentation for training.
 
+3. **Model Architectures**:
+   - **Conv3D**: Captures spatial and temporal features from video input.
+   - **CNN + RNN**: Sequential processing of video frames using LSTMs combined with convolutional layers.
+   - **Transfer Learning**: Leverages MobileNet for feature extraction from video frames.
+
+4. **Evaluation and Visualization**:
+   - Accuracy and loss metrics for each model.
+   - Confusion matrix and classification reports for gesture predictions.
 ---
 
 ## Models
@@ -73,11 +82,3 @@ The goal is to create a smart TV feature that recognizes five gestures performed
 The project demonstrates that deep learning techniques can effectively recognize gestures from video data, offering an intuitive way to interact with smart TVs.
 
 ---
-
-## Usage Instructions
-
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository_url>
-   cd <repository_name>
-   ```
